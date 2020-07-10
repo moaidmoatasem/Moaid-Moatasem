@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Google Search Suite"> <!--parallel="false/true" -->
+	<parameter name="browser" value="firefox" />
+	<test name="Regression Test" preserve-order="false">
+		<classes>
+			<class name="tests.GoogleHomeTest" />
+			<class name="tests.SearchResultTest" />
+		</classes>
+	</test>
+</suite> 
