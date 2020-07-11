@@ -1,10 +1,8 @@
 package pages;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 public class SearchResultPage extends PageBase {
+
     public GoogleHomePage googleHomePage;
 
     public SearchResultPage(WebDriver driver){
@@ -27,8 +26,8 @@ public class SearchResultPage extends PageBase {
     @FindBy (xpath = "//div/table/tbody/tr/td[not(@class='b d6cvqb')]/a[@class='fl']")
     public List<WebElement> buttonsPagination;
 
-    @FindBy (xpath = "//*/div [@id='slim_appbar']//div[@id='result-stats']")
-    public WebElement pageNumberHeader;
+    @FindBy (xpath = "//div[@class='T47uwc']")
+    public List<WebElement> searchOptions;
 
     public void choosePageNumber(int number){
 //        Actions actions = new Actions(driver);
@@ -43,7 +42,6 @@ public class SearchResultPage extends PageBase {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
 //        actions.click();
     }
 
