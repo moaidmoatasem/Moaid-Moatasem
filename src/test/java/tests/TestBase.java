@@ -44,7 +44,6 @@ public class TestBase {
         driver.navigate().to("https://www.google.com/ncr");
     }
 
-
     @AfterSuite
     public void stopDriver(){
         driver.quit();
