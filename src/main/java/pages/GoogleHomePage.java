@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,6 +28,9 @@ public class GoogleHomePage extends PageBase{
     @FindBy (xpath = "//li[not(@id='sbt')][@class='sbct']/div[@class='jKWzZXdEJWi__suggestions-inner-container']") // "//*[@class='sbct']/div/div/div")
     public List<WebElement> autoCompleteSearchList;
 
+    //Country in Bottom
+    @FindBy (xpath = "//span[@class='Q8LRLc']")
+    public WebElement country;
 
     public void userSearching(String searchTxt){
         /* without wrapping - encapsulation
